@@ -1,0 +1,125 @@
+/* Conteneur principal */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Toolbar */
+.toolbar {
+  height: 55px;
+  width: 100%;
+
+  background: rgba(20, 20, 30, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  border-top: 1px solid #969696;
+
+  display: flex;
+  align-items: center;
+
+  /* Important : padding équilibré */
+  padding-left: 12px;
+  padding-right: 12px;
+
+  box-sizing: border-box;
+
+  color: white;
+
+  font-family: system-ui, sans-serif;
+}
+
+/* Zone gauche */
+.left {
+  display: flex;
+  align-items: center;
+
+  min-width: 80px;
+}
+
+/* Zone centrale (future apps) */
+.center {
+  flex: 1;
+}
+
+/* Zone droite */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 140px;
+
+  padding-left: 10px;
+
+  box-sizing: border-box;
+}
+
+/* Date / heure */
+.datetime {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  text-align: right;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+/* Heure */
+.time {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Date */
+.date {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+/* Bouton Start */
+.start {
+  background: transparent;
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  padding: 4px 8px;
+
+  border-radius: 4px;
+}
+
+.start:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .toolbar {
+    height: 42px;
+  }
+
+  .right {
+    min-width: 110px;
+  }
+
+  .time {
+    font-size: 13px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+}
